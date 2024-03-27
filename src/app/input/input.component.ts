@@ -4,7 +4,8 @@ import {Router} from "@angular/router";
 @Component({
   selector: 'app-input',
   templateUrl: './input.component.html',
-  styleUrl: './input.component.css'
+  styleUrl: './input.component.css',
+  host : {class : 'innerClass'}
 })
 export class InputComponent {
 

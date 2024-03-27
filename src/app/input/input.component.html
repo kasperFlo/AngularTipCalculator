@@ -1,4 +1,4 @@
-<div class="app-input">
+
   <h2>Input</h2>
   <form (ngSubmit)="onSubmit()" #myForm="ngForm">
     <p>
@@ -9,11 +9,11 @@
 
     </p>
 
-    <p> <label><input type="radio" name="serviceQuality" value="0.15" required
+    <p> <label><input type="radio" name="serviceQuality" value="0.15"
                       [(ngModel)]="tipHandler.tipData.serviceQuality"> Okey (15%)</label><br>
       <label><input type="radio" name="serviceQuality" value="0.18"
                     [(ngModel)]="tipHandler.tipData.serviceQuality"> Good (18%)</label><br>
-      <label><input type="radio" name="serviceQuality" value="0.20"
+      <label><input type="radio" name="serviceQuality" value="0.20" checked
                     [(ngModel)]="tipHandler.tipData.serviceQuality"> Excellent (20%)</label>
     </p>
 
@@ -29,11 +29,11 @@
 
   </form>
 
-  <h3>You Entered</h3>
-  <p>
-    Base Meal Cost: {{tipHandler.tipData.costOfService}}<br>
-    Final Meal Choice: {{tipHandler.tipData.calculateFinalAmount()}}<br>
-    Tip Selected : {{tipHandler.tipData.serviceQuality}}<br>
-    Round Up: {{tipHandler.tipData.roundUp}}
-  </p>
-</div>
+<!--  <h3>You Entered</h3>-->
+<!--  <p>-->
+<!--    Base Meal Cost: {{tipHandler.tipData.costOfService}}<br>-->
+<!--    Final Meal Choice: {{tipHandler.tipData.calculateFinalAmount()}}<br>-->
+<!--    Tip Selected : {{tipHandler.tipData.serviceQuality}}<br>-->
+<!--    Round Up: {{tipHandler.tipData.roundUp}}-->
+<!--  </p>-->
+

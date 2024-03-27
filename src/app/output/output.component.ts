@@ -5,7 +5,8 @@ import {TipData} from "../tip-data";
 @Component({
   selector: 'app-output',
   templateUrl: './output.component.html',
-  styleUrl: './output.component.css'
+  styleUrl: './output.component.css',
+  host : {class : 'innerClass'}
 })
 
 export class OutputComponent {

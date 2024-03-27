@@ -1,16 +1,15 @@
-<div class="app-output">
-  <h2>Output</h2>
-  <p class="message">
-    Thank you submitting your final Bill is!
-  </p>
-  <p>
-    <span class="label">Your Meal Cost is :</span> {{tipData.calculateFinalAmount() +"$  "+ "(w/tip " +(tipData.serviceQuality*100) +"%)" }}
-  </p>
-  <p>
-    <span class="label">Your Tip Amount is :</span> {{tipData.calculateTipAmount()+"%"}}
-  </p>
-  <p>
-    <span class="label"> </span> {{  tipData.roundUp ? "yuh tip" : "nah tip" }}
-  </p>
-  <a routerLink="/input">Back to Input</a>
-<div class="app-input">
+<h2>Output</h2>
+<p class="message">
+  Thank you submitting your final Bill is!
+</p>
+<p>
+  <span class="label">Your Meal Cost is :</span> {{tipData.calculateFinalAmount() +"$  "+ "(w/tip " +(tipData.serviceQuality*100) +"%)" }}
+</p>
+<p>
+  <span class="label">Your Tip Amount is :</span> {{tipData.calculateTipAmount()+"$"}}
+</p>
+<p>
+  <span class="label"> </span> {{  tipData.roundUp ? "You rounded up" : "Didnt Round tip" }}
+</p>
+<a routerLink="/input">Back to Input</a>
+
