@@ -1,0 +1,39 @@
+<div class="app-input">
+  <h2>Input</h2>
+  <form (ngSubmit)="onSubmit()" #myForm="ngForm">
+    <p>
+        <label>Cost of Meal: <input type="number" name="costOfMeal " required pattern="^[1-9]\d*(\.\d+)?$"
+                                    [(ngModel)]="tipHandler.tipData.costOfService" >
+        </label>
+  <!--    <span [hidden]="tipData.valid || tipData.untouched" class="error"> &larr; required</span>-->
+
+    </p>
+
+    <p> <label><input type="radio" name="serviceQuality" value="0.15" required
+                      [(ngModel)]="tipHandler.tipData.serviceQuality"> Okey (15%)</label><br>
+      <label><input type="radio" name="serviceQuality" value="0.18"
+                    [(ngModel)]="tipHandler.tipData.serviceQuality"> Good (18%)</label><br>
+      <label><input type="radio" name="serviceQuality" value="0.20"
+                    [(ngModel)]="tipHandler.tipData.serviceQuality"> Excellent (20%)</label>
+    </p>
+
+    <p>
+      <label><input type="checkbox" name="roundUp" [(ngModel)]="tipHandler.tipData.roundUp">
+        Round Up Tip
+      </label>
+    </p>
+
+    <p>
+      <button type="submit" [disabled]="myForm.form.invalid">Submit</button>
+    </p>
+
+  </form>
+
+  <h3>You Entered</h3>
+  <p>
+    Base Meal Cost: {{tipHandler.tipData.costOfService}}<br>
+    Final Meal Choice: {{tipHandler.tipData.calculateFinalAmount()}}<br>
+    Tip Selected : {{tipHandler.tipData.serviceQuality}}<br>
+    Round Up: {{tipHandler.tipData.roundUp}}
+  </p>
+</div>
